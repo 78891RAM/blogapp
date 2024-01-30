@@ -40,41 +40,18 @@ class _AuthState extends State<Auth> {
                     .color(Colors.white)
                     .make(),
                 44.h.heightBox,
-                ElevatedButton(
-                  style: ElevatedButton.styleFrom(
-                      minimumSize:
-                          Size(MediaQuery.of(context).size.width, 44.h),
-                      shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(11.r)),
-                      backgroundColor: ColorPalate.primary),
+                PrimaryButton(
+                  title: "Login",
                   onPressed: () {
-                    // AutoRouter.of(context).push(const AuthRoute());
+                    AutoRouter.of(context).push(const LoginRoute());
                   },
-                  child: "Login"
-                      .text
-                      .color(Colors.white)
-                      .size(16.sp)
-                      .fontWeight(FontWeight.w700)
-                      .make(),
                 ),
                 12.h.heightBox,
-                ElevatedButton(
-                  style: ElevatedButton.styleFrom(
-                      minimumSize:
-                          Size(MediaQuery.of(context).size.width, 44.h),
-                      shape: RoundedRectangleBorder(
-                          side: const BorderSide(color: Colors.white),
-                          borderRadius: BorderRadius.circular(11.r)),
-                      backgroundColor: Colors.transparent),
+                customButton(
+                  title: "Register",
                   onPressed: () {
-                    // AutoRouter.of(context).push(const AuthRoute());
+                    AutoRouter.of(context).push(const RegisterRoute());
                   },
-                  child: "Register"
-                      .text
-                      .color(Colors.white)
-                      .size(16.sp)
-                      .fontWeight(FontWeight.w700)
-                      .make(),
                 ),
                 40.h.heightBox
               ],
@@ -85,3 +62,30 @@ class _AuthState extends State<Auth> {
     );
   }
 }
+
+// class primaryButton extends StatelessWidget {
+//   const primaryButton({
+//     super.key,
+//   });
+
+//   @override
+//   Widget build(BuildContext context) {
+//     return ElevatedButton(
+//       style: ElevatedButton.styleFrom(
+//           minimumSize:
+//               Size(MediaQuery.of(context).size.width, 44.h),
+//           shape: RoundedRectangleBorder(
+//               borderRadius: BorderRadius.circular(11.r)),
+//           backgroundColor: ColorPalate.primary),
+//       onPressed: () {
+//         AutoRouter.of(context).push(const LoginRoute());
+//       },
+//       child: "Login"
+//           .text
+//           .color(Colors.white)
+//           .size(16.sp)
+//           .fontWeight(FontWeight.w700)
+//           .make(),
+//     );
+//   }
+// }

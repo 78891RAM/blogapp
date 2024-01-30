@@ -6,6 +6,7 @@ import 'package:velocity_x/velocity_x.dart';
 
 import '../../../core/constants/assets.dart';
 import '../../../core/constants/colors.dart';
+import '../../routes/router_imports.gr.dart';
 
 part 'auth.dart';
 part 'auth.i18n.dart';

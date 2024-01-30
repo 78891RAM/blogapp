@@ -10,14 +10,29 @@ class SplashScreen extends StatefulWidget {
 
 class _SplashScreenState extends State<SplashScreen> {
   @override
+  void initState() {
+    moveToOnboardScreen();
+
+    super.initState();
+  }
+
+  moveToOnboardScreen() async {
+    Future.delayed(const Duration(seconds: 2), () {
+      AutoRouter.of(context).push(const OnboardScreenRoute());
+    });
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: ColorPalate.primary,
       body: Center(
-          child: Image.asset(
-        "assets/images/logoo.png",
-        height: 42,
-        width: 139,
+          child: FadedScaleAnimation(
+        child: Image.asset(
+          "assets/images/logoo.png",
+          height: 42,
+          width: 139,
+        ),
       )),
     );
   }

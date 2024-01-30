@@ -29,7 +29,7 @@ class _SplashScreenState extends State<SplashScreen> {
       body: Center(
           child: FadedScaleAnimation(
         child: Image.asset(
-          "assets/images/logoo.png",
+          Assets.assetsImagesLogoo,
           height: 42,
           width: 139,
         ),

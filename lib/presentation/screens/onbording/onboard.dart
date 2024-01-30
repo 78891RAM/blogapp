@@ -30,7 +30,7 @@ class OnboardScreen extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 Image.asset(
-                  "assets/images/logoo.png",
+                  Assets.assetsImagesLogoo,
                   color: ColorPalate.primary,
                   height: 42.h,
                   width: 139.w,
@@ -52,7 +52,9 @@ class OnboardScreen extends StatelessWidget {
                       shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(11.r)),
                       backgroundColor: ColorPalate.primary),
-                  onPressed: () {},
+                  onPressed: () {
+                    AutoRouter.of(context).push(const AuthRoute());
+                  },
                   child: "Get Started"
                       .text
                       .color(Colors.white)

@@ -24,10 +24,10 @@ class _LoginState extends State<Login> {
               ).centered(),
               93.h.heightBox,
               Container(
-                height: MediaQuery.of(context).size.height,
-                width: MediaQuery.of(context).size.width,
-                // height: MediaQuery.sizeOf(context).height,
-                // width: MediaQuery.sizeOf(context).width,
+                // height: MediaQuery.of(context).size.height,
+                // width: MediaQuery.of(context).size.width,
+                height: MediaQuery.sizeOf(context).height,
+                width: MediaQuery.sizeOf(context).width,
                 decoration: const BoxDecoration(
                   color: Colors.white,
                   borderRadius: BorderRadius.only(

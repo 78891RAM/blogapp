@@ -60,7 +60,10 @@ class _LoginState extends State<Login> {
                         borderRadius: 10,
                         borderType: VxTextFieldBorderType.roundLine,
                         borderColor: ColorPalate.primary,
-                        prefixIcon: Icon(Icons.email),
+                        prefixIcon: Icon(
+                          Icons.email,
+                          color: ColorPalate.primary,
+                        ),
                       ),
                       24.h.heightBox,
                       "Password"
@@ -77,7 +80,10 @@ class _LoginState extends State<Login> {
                         borderRadius: 10,
                         borderType: VxTextFieldBorderType.roundLine,
                         borderColor: ColorPalate.primary,
-                        prefixIcon: Icon(Icons.lock),
+                        prefixIcon: Icon(
+                          Icons.lock,
+                          color: ColorPalate.primary,
+                        ),
                       ),
                       24.h.heightBox,
                       Row(
@@ -113,7 +119,8 @@ class _LoginState extends State<Login> {
                       PrimaryButton(
                         title: "Login",
                         onPressed: () {
-                          // AutoRouter.of(context).push(const LoginRoute());
+                          AutoRouter.of(context)
+                              .push(const BottomNavBarRoute());
                         },
                       ),
                       48.h.heightBox,

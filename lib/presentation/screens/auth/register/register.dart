@@ -42,14 +42,14 @@ class _RegisterState extends State<Register> {
                       "Sign up"
                           .text
                           .fontWeight(FontWeight.w700)
-                          .size(18)
+                          .size(18.sp)
                           .color(ColorPalate.primary)
                           .makeCentered(),
                       50.h.heightBox,
                       "Email"
                           .text
                           .fontWeight(FontWeight.w500)
-                          .size(14)
+                          .size(14.sp)
                           .color(ColorPalate.primary)
                           .make(),
                       14.h.heightBox,
@@ -87,7 +87,7 @@ class _RegisterState extends State<Register> {
                       "Confirm Password"
                           .text
                           .fontWeight(FontWeight.w500)
-                          .size(14)
+                          .size(14.sp)
                           .color(ColorPalate.primary)
                           .make(),
                       14.h.heightBox,

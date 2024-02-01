@@ -5,7 +5,7 @@ import 'package:i18n_extension/i18n_extension.dart';
 import 'package:velocity_x/velocity_x.dart';
 
 import '../../../core/constants/assets.dart';
-import '../../../core/constants/colors.dart';
+
 import '../../common_widgets/custom_button_imports.dart';
 import '../../routes/router_imports.gr.dart';
 

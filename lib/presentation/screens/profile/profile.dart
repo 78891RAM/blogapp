@@ -80,13 +80,24 @@ class _ProfileState extends State<Profile> {
               ),
               const Divider(
                 color: Color.fromARGB(255, 225, 224, 224),
-                // height: 1,
               ),
               CardProfile(
                 text: 'Profile',
                 borderRadius: BorderRadius.circular(50.0),
                 icon: Icons.person,
                 backgroundColor: const Color.fromARGB(255, 141, 145, 202),
+                onPressed: () {
+                  AutoRouter.of(context).push(
+                    const ProfileDetailsRoute(),
+                  );
+                },
+              ),
+              5.h.heightBox,
+              CardProfile(
+                text: 'Notification',
+                borderRadius: BorderRadius.circular(50.0),
+                backgroundColor: const Color.fromARGB(255, 224, 2, 2),
+                icon: Icons.notifications,
                 onPressed: () {},
               ),
 
@@ -119,7 +130,7 @@ class _ProfileState extends State<Profile> {
                 text: 'Wishlists',
                 borderRadius: BorderRadius.circular(50.0),
                 icon: Icons.favorite,
-                backgroundColor: Color.fromARGB(255, 190, 47, 81),
+                backgroundColor: const Color.fromARGB(255, 190, 47, 81),
                 onPressed: () {},
               ),
               5.h.heightBox,
@@ -128,7 +139,6 @@ class _ProfileState extends State<Profile> {
                 borderRadius: BorderRadius.circular(50.0),
                 icon: Icons.bookmark,
                 backgroundColor: const Color.fromARGB(255, 60, 60, 58),
-                // onPressed: () => authBloc.add(LogOutEvent()),
                 onPressed: () {},
               ),
               5.h.heightBox,
@@ -137,13 +147,7 @@ class _ProfileState extends State<Profile> {
                 borderRadius: BorderRadius.circular(50.0),
                 icon: Icons.history,
                 backgroundColor: const Color.fromARGB(255, 48, 152, 77),
-                // onPressed: () => authBloc.add(LogOutEvent()),
-                onPressed: () {
-                  // Navigator.push(
-                  //   context,
-                  //   MaterialPageRoute(builder: (context) => GoogleMapScreen()),
-                  // );
-                },
+                onPressed: () {},
               ),
               5.h.heightBox,
 
@@ -152,13 +156,7 @@ class _ProfileState extends State<Profile> {
                 borderRadius: BorderRadius.circular(50.0),
                 icon: Icons.logout,
                 backgroundColor: ColorPalate.primary,
-                // onPressed: () => authBloc.add(LogOutEvent()),
-                onPressed: () {
-                  // Navigator.push(
-                  //   context,
-                  //   MaterialPageRoute(builder: (context) => GoogleMapScreen()),
-                  // );
-                },
+                onPressed: () {},
               ),
             ],
           ),

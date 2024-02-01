@@ -100,7 +100,6 @@ class _ProfileState extends State<Profile> {
                 icon: Icons.notifications,
                 onPressed: () {},
               ),
-
               5.h.heightBox,
               CardProfile(
                 text: 'Settings',
@@ -150,7 +149,6 @@ class _ProfileState extends State<Profile> {
                 onPressed: () {},
               ),
               5.h.heightBox,
-
               CardProfile(
                 text: 'Log Out',
                 borderRadius: BorderRadius.circular(50.0),

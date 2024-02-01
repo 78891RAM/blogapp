@@ -16,8 +16,72 @@ class _ProfileState extends State<Profile> {
         padding: const EdgeInsets.symmetric(horizontal: 10),
         children: [
           Column(
+            // mainAxisAlignment: MainAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               40.h.heightBox,
+              // CircleAvatar(
+              //   backgroundColor: const Color.fromARGB(255, 204, 199, 199),
+              //   radius: 50.r,
+              //   child: const Column(
+              //     mainAxisAlignment: MainAxisAlignment.center,
+              //     children: [
+              //       Text(
+              //         "RA",
+              //         style: TextStyle(
+              //             fontSize: 40,
+              //             fontWeight: FontWeight.w900,
+              //             color: Colors.white),
+              //       ),
+              //     ],
+              //   ),
+              // ),
+
+              Row(
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  CircleAvatar(
+                    backgroundColor: const Color.fromARGB(255, 204, 199, 199),
+                    radius: 50.r,
+                    child: Text(
+                      "RA",
+                      style: TextStyle(
+                        fontSize: 40.sp,
+                        fontWeight: FontWeight.w900,
+                        color: Colors.white,
+                      ),
+                    ),
+                  ),
+                  SizedBox(
+                      width: 10.0
+                          .h), // Add some spacing between CircleAvatar and Text
+                  Column(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        "Ram Bhandari",
+                        style: TextStyle(
+                          fontSize: 17.sp,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.black,
+                        ),
+                      ),
+                      Text(
+                        "raambhandari78891@gmail.com",
+                        style: TextStyle(
+                          fontSize: 12.sp,
+                          color: Colors.grey,
+                        ),
+                      ),
+                    ],
+                  ),
+                ],
+              ),
+              const Divider(
+                color: Color.fromARGB(255, 225, 224, 224),
+                // height: 1,
+              ),
               CardProfile(
                 text: 'Profile',
                 borderRadius: BorderRadius.circular(50.0),
@@ -25,10 +89,8 @@ class _ProfileState extends State<Profile> {
                 backgroundColor: const Color.fromARGB(255, 141, 145, 202),
                 onPressed: () {},
               ),
-              const Divider(
-                color: Color.fromARGB(255, 225, 224, 224),
-              ),
-              // 10.h.heightBox,
+
+              5.h.heightBox,
               CardProfile(
                 text: 'Settings',
                 borderRadius: BorderRadius.circular(50.0),
@@ -36,7 +98,7 @@ class _ProfileState extends State<Profile> {
                 icon: Icons.settings_applications,
                 onPressed: () {},
               ),
-              10.h.heightBox,
+              5.h.heightBox,
               CardProfile(
                 text: 'Categories',
                 borderRadius: BorderRadius.circular(50.0),
@@ -44,7 +106,7 @@ class _ProfileState extends State<Profile> {
                 backgroundColor: const Color.fromARGB(255, 97, 101, 97),
                 onPressed: () {},
               ),
-              20.h.heightBox,
+              5.h.heightBox,
               CardProfile(
                 text: 'Location',
                 borderRadius: BorderRadius.circular(50.0),
@@ -52,7 +114,7 @@ class _ProfileState extends State<Profile> {
                 backgroundColor: const Color.fromARGB(255, 15, 225, 183),
                 onPressed: () {},
               ),
-              20.h.heightBox,
+              5.h.heightBox,
               CardProfile(
                 text: 'Wishlists',
                 borderRadius: BorderRadius.circular(50.0),
@@ -60,7 +122,7 @@ class _ProfileState extends State<Profile> {
                 backgroundColor: Color.fromARGB(255, 190, 47, 81),
                 onPressed: () {},
               ),
-              20.h.heightBox,
+              5.h.heightBox,
               CardProfile(
                 text: 'Saved',
                 borderRadius: BorderRadius.circular(50.0),
@@ -69,7 +131,7 @@ class _ProfileState extends State<Profile> {
                 // onPressed: () => authBloc.add(LogOutEvent()),
                 onPressed: () {},
               ),
-              20.h.heightBox,
+              5.h.heightBox,
               CardProfile(
                 text: 'Hisory',
                 borderRadius: BorderRadius.circular(50.0),
@@ -83,21 +145,8 @@ class _ProfileState extends State<Profile> {
                   // );
                 },
               ),
-              20.h.heightBox,
-              CardProfile(
-                text: 'Location',
-                borderRadius: BorderRadius.circular(50.0),
-                icon: Icons.location_on,
-                backgroundColor: const Color.fromARGB(255, 15, 225, 183),
-                // onPressed: () => authBloc.add(LogOutEvent()),
-                onPressed: () {
-                  // Navigator.push(
-                  //   context,
-                  //   MaterialPageRoute(builder: (context) => GoogleMapScreen()),
-                  // );
-                },
-              ),
-              20.h.heightBox,
+              5.h.heightBox,
+
               CardProfile(
                 text: 'Log Out',
                 borderRadius: BorderRadius.circular(50.0),

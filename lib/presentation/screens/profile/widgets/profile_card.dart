@@ -48,11 +48,11 @@ class CardProfile extends StatelessWidget {
                           borderRadius: BorderRadius.circular(12.0.r)),
                       child: Icon(
                         icon,
-                        size: 20.h,
+                        size: 25.h,
                         color: Colors.white,
                       ),
                     ),
-                    SizedBox(width: 20.0.w),
+                    SizedBox(width: 30.0.w),
                     Text(
                       text!,
                       style: const TextStyle(

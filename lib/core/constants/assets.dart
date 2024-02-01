@@ -28,5 +28,9 @@ class Assets {
   /// Assets for assetsImagesOnbord1
   /// assets/images/onbord1.png
   static const String assetsImagesOnbord1 = "assets/images/onbord1.png";
+
+  /// Assets for assetsImagesPicture
+  /// assets/images/picture.jpg
+  static const String assetsImagesPicture = "assets/images/picture.jpg";
 }
 

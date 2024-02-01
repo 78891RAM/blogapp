@@ -91,7 +91,8 @@ class _LoginState extends State<Login> {
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           SizedBox(
-                            width: 200.h,
+                            width: 190.w,
+                            // height: 100.h,  /
                             child: CheckboxListTile(
                               controlAffinity: ListTileControlAffinity.leading,
                               contentPadding: EdgeInsets.zero,

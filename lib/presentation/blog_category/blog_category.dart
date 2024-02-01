@@ -1,21 +1,21 @@
-part of 'tags_imports.dart';
+part of 'blog_category_imports.dart';
 
 @RoutePage()
-class Tags extends StatefulWidget {
-  const Tags({super.key});
+class AddCategory extends StatefulWidget {
+  const AddCategory({super.key});
 
   @override
-  State<Tags> createState() => _TagsState();
+  State<AddCategory> createState() => _AddCategoryState();
 }
 
-class _TagsState extends State<Tags> {
+class _AddCategoryState extends State<AddCategory> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         automaticallyImplyLeading: false,
         backgroundColor: ColorPalate.primary,
-        title: "Tags".text.color(Colors.white).makeCentered(),
+        title: "Categories".text.color(Colors.white).makeCentered(),
         actions: [
           IconButton(
             onPressed: () {},

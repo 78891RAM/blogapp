@@ -15,13 +15,13 @@ class _BottomNavBarState extends State<BottomNavBar> {
       icon: Icons.home,
     ),
     const TabItem(
-      icon: Icons.bookmark,
+      icon: Icons.category,
     ),
     const TabItem(
       icon: Icons.add,
     ),
     const TabItem(
-      icon: Icons.favorite_border_outlined,
+      icon: Icons.tag,
     ),
     const TabItem(
       icon: Icons.person,
@@ -30,9 +30,10 @@ class _BottomNavBarState extends State<BottomNavBar> {
 
   List<Widget> pages = [
     const Home(),
-    const Profile(),
+    const AddCategory(),
     const AddPosts(),
     const Tags(),
+    const Profile(),
   ];
 
   @override

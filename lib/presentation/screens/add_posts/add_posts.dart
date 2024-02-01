@@ -49,7 +49,7 @@ class _ProfileState extends State<AddPosts> {
               ),
             ],
           ),
-          24.h.heightBox,
+          20.h.heightBox,
           const VxTextField(
             fillColor: Colors.transparent,
             hint: "title",
@@ -57,7 +57,7 @@ class _ProfileState extends State<AddPosts> {
             borderType: VxTextFieldBorderType.roundLine,
             borderColor: ColorPalate.primary,
           ),
-          24.h.heightBox,
+          18.h.heightBox,
           const VxTextField(
             fillColor: Colors.transparent,
             hint: "Slug",
@@ -66,11 +66,11 @@ class _ProfileState extends State<AddPosts> {
             borderType: VxTextFieldBorderType.roundLine,
             borderColor: ColorPalate.primary,
           ),
-          24.h.heightBox,
+          15.h.heightBox,
           Container(
             height: 40.h,
             decoration: BoxDecoration(
-              color: Color.fromARGB(255, 249, 248, 248),
+              color: const Color.fromARGB(255, 249, 248, 248),
               borderRadius: BorderRadius.circular(10),
             ),
             child: Row(

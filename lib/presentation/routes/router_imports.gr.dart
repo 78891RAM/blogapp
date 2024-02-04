@@ -9,13 +9,13 @@
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:auto_route/auto_route.dart' as _i12;
-import 'package:blogapp/presentation/blog_category/blog_category_imports.dart'
-    as _i1;
 import 'package:blogapp/presentation/screens/auth/auth_imports.dart' as _i2;
 import 'package:blogapp/presentation/screens/auth/login/login_imports.dart'
     as _i5;
 import 'package:blogapp/presentation/screens/auth/register/register_imports.dart'
     as _i9;
+import 'package:blogapp/presentation/screens/blog_category/blog_category_imports.dart'
+    as _i1;
 import 'package:blogapp/presentation/screens/bottom_navigationbar/bottom_navbar_imports.dart'
     as _i3;
 import 'package:blogapp/presentation/screens/home/home_imports.dart' as _i4;

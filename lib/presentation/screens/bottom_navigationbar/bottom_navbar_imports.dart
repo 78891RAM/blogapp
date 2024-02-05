@@ -7,7 +7,8 @@ import 'package:flutter/material.dart';
 import 'package:awesome_bottom_bar/awesome_bottom_bar.dart';
 
 import '../../../core/constants/colors.dart';
-import '../../blog_category/blog_category_imports.dart';
+
+import '../blog_category/blog_category_imports.dart';
 
 part 'bottom_navbar.dart';
 part 'bottom_navbara_view_model.dart';

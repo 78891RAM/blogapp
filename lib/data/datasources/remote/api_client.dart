@@ -70,7 +70,7 @@ class ApiClient {
       debugPrint("data: ${response.data}");
 
       debugPrint("=======sub string Data========");
-      debugPrint(response.data.subString(2, MaxLengthEnforcement));
+      debugPrint(response.data.subString(2, min(2, 2)));
 
       return response;
     } on DioException catch (e) {

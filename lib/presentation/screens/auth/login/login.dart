@@ -9,6 +9,15 @@ class Login extends StatefulWidget {
 }
 
 class _LoginState extends State<Login> {
+  late LoginViewModel loginViewModel;
+
+  @override
+  void initState() {
+    loginViewModel = LoginViewModel(repository: context.read<Repository>());
+
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -55,12 +64,13 @@ class _LoginState extends State<Login> {
                           .color(ColorPalate.primary)
                           .make(),
                       14.h.heightBox,
-                      const VxTextField(
+                      VxTextField(
+                        controller: loginViewModel.emailController,
                         fillColor: Colors.transparent,
                         borderRadius: 10,
                         borderType: VxTextFieldBorderType.roundLine,
                         borderColor: ColorPalate.primary,
-                        prefixIcon: Icon(
+                        prefixIcon: const Icon(
                           Icons.email,
                           color: ColorPalate.primary,
                         ),
@@ -73,14 +83,15 @@ class _LoginState extends State<Login> {
                           .color(ColorPalate.primary)
                           .make(),
                       14.h.heightBox,
-                      const VxTextField(
+                      VxTextField(
+                        controller: loginViewModel.passwordController,
                         obscureText: false,
                         isPassword: true,
                         fillColor: Colors.transparent,
                         borderRadius: 10,
                         borderType: VxTextFieldBorderType.roundLine,
                         borderColor: ColorPalate.primary,
-                        prefixIcon: Icon(
+                        prefixIcon: const Icon(
                           Icons.lock,
                           color: ColorPalate.primary,
                         ),
@@ -120,8 +131,7 @@ class _LoginState extends State<Login> {
                       PrimaryButton(
                         title: "Login",
                         onPressed: () {
-                          AutoRouter.of(context)
-                              .push(const BottomNavBarRoute());
+                          loginViewModel.loginUser(context);
                         },
                       ),
                       48.h.heightBox,

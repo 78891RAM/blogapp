@@ -53,8 +53,8 @@ class OnboardScreen extends StatelessWidget {
                           borderRadius: BorderRadius.circular(11.r)),
                       backgroundColor: ColorPalate.primary),
                   onPressed: () {
-                    ApiClient().getRequest(path: ApiEndpointsUrls.tags);
-                    // AutoRouter.of(context).push(const AuthRoute());
+                    // ApiClient().getRequest(path: ApiEndpointsUrls.tags);
+                    AutoRouter.of(context).push(const AuthRoute());
                   },
                   child: "Get Started"
                       .text

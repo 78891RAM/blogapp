@@ -2,4 +2,6 @@ class ApiEndpointsUrls {
   static String tags = "tags";
   static String posts = "tags";
   static String category = "categories";
+
+  static String login = "login";
 }

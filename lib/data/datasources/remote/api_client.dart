@@ -2,7 +2,6 @@ import 'dart:math';
 
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 
 import 'api_constants.dart';
 import 'api_exception.dart';
@@ -61,6 +60,7 @@ class ApiClient {
       debugPrint("=======Api Request =========");
 
       debugPrint("baseUrl: ${ApiConstants.mainurl + path}");
+      debugPrint("body: $body");
 
       debugPrint("=======Api Response =========");
 

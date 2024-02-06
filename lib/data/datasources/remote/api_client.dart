@@ -1,5 +1,6 @@
 import 'dart:math';
 
+import 'package:blogapp/utils/utils.dart';
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 
@@ -49,14 +50,13 @@ class ApiClient {
 
   // for post Request========
 
-  Future<Response> postRequest({required path, required dynamic body}) async {
+  Future<Response> postRequest({required path, dynamic body}) async {
+    var token = await Utils.getToken();
     final options = Options(
-      headers: {
-        "Authorization": "Bearer 707|nuznMff1mAlB4j2TrRzCcu2juZ1DnVxoOy1u2uv6"
-      },
+      headers: {"Authorization": "Bearer $token "},
     );
     try {
-      var response = await dio.get(path, data: body, options: options);
+      var response = await dio.post(path, data: body, options: options);
       debugPrint("=======Api Request =========");
 
       debugPrint("baseUrl: ${ApiConstants.mainurl + path}");
@@ -69,13 +69,10 @@ class ApiClient {
 
       debugPrint("data: ${response.data}");
 
-      debugPrint("=======sub string Data========");
-      debugPrint(response.data.subString(2, min(2, 2)));
-
       return response;
     } on DioException catch (e) {
       if (e.response != null) {
-        debugPrint(e.response!.data);
+        debugPrint(e.response!.data.toString());
 
         debugPrint(e.response!.headers.toString());
         debugPrint(e.response!.requestOptions.toString());

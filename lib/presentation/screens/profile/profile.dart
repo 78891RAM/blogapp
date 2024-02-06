@@ -9,6 +9,14 @@ class Profile extends StatefulWidget {
 }
 
 class _ProfileState extends State<Profile> {
+  late ProfileViewModel profileViewModel;
+
+  @override
+  void initState() {
+    profileViewModel = ProfileViewModel(repository: context.read<Repository>());
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -154,7 +162,9 @@ class _ProfileState extends State<Profile> {
                 borderRadius: BorderRadius.circular(50.0),
                 icon: Icons.logout,
                 backgroundColor: ColorPalate.primary,
-                onPressed: () {},
+                onPressed: () {
+                  profileViewModel.logOut(context);
+                },
               ),
             ],
           ),

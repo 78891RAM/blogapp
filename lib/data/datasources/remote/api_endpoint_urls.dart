@@ -4,4 +4,5 @@ class ApiEndpointsUrls {
   static String category = "categories";
 
   static String login = "login";
+  static String logout = "logout";
 }

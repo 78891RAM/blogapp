@@ -5,4 +5,5 @@ class ApiEndpointsUrls {
 
   static String login = "login";
   static String logout = "logout";
+  static String getposts = "posts";
 }

@@ -9,6 +9,14 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
+  late HomeViewModel homeViewModel;
+  @override
+  void initState() {
+    homeViewModel = HomeViewModel(repository: context.read<Repository>());
+    homeViewModel.fetchAllPosts();
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
     const int index = 1;

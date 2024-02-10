@@ -27,7 +27,9 @@ class _TagsState extends State<Tags> {
         title: "Tags".text.color(Colors.white).makeCentered(),
         actions: [
           IconButton(
-            onPressed: () {},
+            onPressed: () {
+              AutoRouter.of(context).push(const AddTagsRoute());
+            },
             icon: Icon(
               Icons.add,
               color: Colors.white,

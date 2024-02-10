@@ -13,4 +13,14 @@ class ProfileViewModel {
       AutoRouter.of(context).replace(const AuthRoute());
     }
   }
+
+  final VelocityBloc<ProfileModel> getUserPostBloc =
+      VelocityBloc<ProfileModel>(ProfileModel());
+  getUserPost() async {
+    var response = await repository.profileRepo.getUserProfile();
+
+    if (response.status == 1) {
+      getUserPostBloc.onUpdateData(response);
+    }
+  }
 }

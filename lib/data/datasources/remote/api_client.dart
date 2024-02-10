@@ -15,10 +15,19 @@ class ApiClient {
     baseOptions = BaseOptions(baseUrl: ApiConstants.mainurl);
     dio = Dio(baseOptions);
   }
+  Options options = Options();
+  Future<Response> getRequest(
+      {required path, bool isTokenRequired = false}) async {
+    if (isTokenRequired == true) {
+      var token = await Utils.getToken();
+      options.headers = baseOptions.headers
+        ..addAll(
+          {"Authorization": "Bearer $token "},
+        );
+    }
 
-  Future<Response> getRequest({required path}) async {
     try {
-      var response = await dio.get(path);
+      var response = await dio.get(path, options: options);
       debugPrint("=======Api Request =========");
 
       debugPrint("baseUrl: ${ApiConstants.mainurl + path}");
@@ -67,7 +76,7 @@ class ApiClient {
       debugPrint("status code: ${response.statusCode}");
       debugPrint("=======Response Data========");
 
-      debugPrint("data: ${response.data}");
+      debugPrint("data: ${response.data.toString().substring(0, 300)}");
 
       return response;
     } on DioException catch (e) {

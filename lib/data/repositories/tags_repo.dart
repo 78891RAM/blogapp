@@ -1,8 +1,8 @@
-import 'package:blogapp/data/datasources/remote/api_endpoint_urls.dart';
-import 'package:blogapp/presentation/screens/tags/tags_imports.dart';
 import 'package:velocity_x/velocity_x.dart';
 
+import '../../presentation/screens/tags/tags_imports.dart';
 import '../datasources/remote/api_client.dart';
+import '../datasources/remote/api_endpoint_urls.dart';
 
 class TagsRepo extends ApiClient {
   Future<TagsModel> getAllTags() async {
